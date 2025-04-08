@@ -1,15 +1,15 @@
 {
-	"name": "Andrew Nelson",
+	"name": "Shwetas Dhake",
 	"logo": "",
 	
 	"username": {
-		"github": "atlamors",
-		"medium": "@--andrewnelson"
+		"github": "shwetd19",
+		"medium": "@shwetasdhake16"
 	},
 
 	"portfolio": { 
 		"forkthis": "Steal this theme! Its open-source 🥰",
-		"repo_html": "https://www.github.com/atlamors/portfolio",
-		"repo_api": "https://api.github.com/repos/atlamors/portfolio"
+		"repo_html": "https://github.com/shwetd19/portfolio",
+		"repo_api": "https://api.github.com/repos/shwetd19/portfolio"
 	}
 }

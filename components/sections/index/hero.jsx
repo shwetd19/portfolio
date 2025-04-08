@@ -27,8 +27,28 @@ import content		from '../../../content/index/hero.json'
  */
 
 export default function Hero() {
-
 	const [typingStatus, setTypingStatus] = useState('Initializing');
+
+	const handlePrimaryClick = () => {
+		// If URL is empty, assume it's an email contact button
+		if (!content.buttons.primary.url) {
+			window.location.href = 'mailto:shwetasdhake16@gmail.com';
+		} else {
+			if (content.buttons.primary.leaveSite) {
+				window.open(content.buttons.primary.url, '_blank');
+			} else {
+				window.location.href = content.buttons.primary.url;
+			}
+		}
+	};
+
+	const handleSecondaryClick = () => {
+		if (content.buttons.secondary.leaveSite) {
+			window.open(content.buttons.secondary.url, '_blank');
+		} else {
+			window.location.href = content.buttons.secondary.url;
+		}
+	};
 
 	return (
 		<Section classProp={`${hero.section}`}>
@@ -53,7 +73,7 @@ export default function Hero() {
 				<section>
 					<h1 className={hero.header}>
 						{content.header.name}
-						</h1>
+					</h1>
 					<h1 className={`${hero.header} ${hero.primaryDim}`}>
 						{content.header.usp}
 					</h1>
@@ -64,12 +84,16 @@ export default function Hero() {
 					</p>					
 				</section>
 				<section>
-					<button	className={`button ${button.primary}`}
-							onClick={ () => window.location = 'mailto:hello@andrewnelson.net' } >
+					<button	
+						className={`button ${button.primary}`}
+						onClick={handlePrimaryClick}
+					>
 						{content.buttons.primary.title}
 					</button>
-					<button className={`button ${button.secondary} leaveSite`}
-							onClick={ ()=> window.open("https://www.linkedin.com/in/--andrewnelson/", "_blank") } >
+					<button 
+						className={`button ${button.secondary}`}
+						onClick={handleSecondaryClick}
+					>
 						{content.buttons.secondary.title}
 					</button>
 				</section>

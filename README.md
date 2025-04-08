@@ -1,15 +1,15 @@
 
 <div align="center">
-  <h1>andrewnelson.net | portfolio</h1>
+  <h1>ShwetasDhake.net | portfolio</h1>
   <p></p>
   <img src="https://img.shields.io/badge/stability-beta-blue.svg" alt="Experimental">
-  <img src="https://vercelbadge.vercel.app/api/atlamors/portfolio-theme" alt="Vercel">
-  <img src="https://therealsujitk-vercel-badge.vercel.app/?app=portfolio-theme-jqe0jhmif-atlamors.vercel.app" alt="Vercel Deployed">
-  <img src="https://img.shields.io/github/license/atlamors/portfolio-theme" alt="Liscence">
+  <img src="https://vercelbadge.vercel.app/api/shwetd19/portfolio-theme" alt="Vercel">
+  <img src="https://therealsujitk-vercel-badge.vercel.app/?app=portfolio-theme-jqe0jhmif-shwetd19.vercel.app" alt="Vercel Deployed">
+  <img src="https://img.shields.io/github/license/shwetd19/portfolio-theme" alt="Liscence">
   <br><br>
 </div>
 
-<img src="https://www.andrewnelson.net/img/preview.png">
+<img src="https://www.ShwetasDhake.net/img/preview.png">
 
 ## Updates
 #### Dev Update — July 6th, 2023 🥰
@@ -28,7 +28,7 @@ The porftofolio application has currently hit the Beta phase and is ready to be 
 - [ ] Next.js v13 : Waiting for /app/ folder to leave beta
 - [ ] Sanity.io
 
-#### App Architecure & Design Systems
+#### App Architecure & Scalable System Design
 - [ ] App\Systems\Margins : Continuing to develop Design Token System
 - [ ] App\Systems\Padding : Continuing to develop Design Token System
 

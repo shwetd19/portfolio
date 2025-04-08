@@ -12,7 +12,7 @@ import content 		from '../../../content/projects/featured.json'
 
 export default function FeaturedProject({ content }, index) {
 
-	const { project, url, repo, descriptionTitle,description, stack, imageOptions, images } = content
+	const { project, url, repo, descriptionTitle, description, stack, imageOptions, images } = content
 
 	const controls = useAnimation();
 	const { ref, inView  } = useInView({
@@ -25,10 +25,24 @@ export default function FeaturedProject({ content }, index) {
 		if ( !inView ) { controls.start("hidden") }
 	}, [ controls, inView ] )
 
+	const handleScroll = (e) => {
+		e.preventDefault();
+		const section = url.replace('#', '');
+		const element = document.getElementById(section);
+		if (element) {
+			element.scrollIntoView({ 
+				behavior: 'smooth',
+				block: 'start'
+			});
+		}
+	};
+
 	return (
 		<m.section 	
 			key={index}
 			className={css.project} 
+			onClick={handleScroll}
+			style={{ cursor: 'pointer' }}
 			//framer-motion
 			ref={ref}
 			variants={container}
@@ -39,7 +53,10 @@ export default function FeaturedProject({ content }, index) {
 			<div className={css.details}>
 				<div className={css.projectHeader}>
 					<div className={css.header}>
-						<h3 className="highlight">{project}</h3><span className={css.privateOr}><i className="devicon-github-plain"></i>{repo}</span>	
+						<h3 className="highlight">{project}</h3>
+						<span className={css.privateOr}>
+							<Icon icon={['fas', 'chevron-down']} />
+						</span>	
 					</div>
 					<div className={css.description}>
 						<p><strong>{descriptionTitle}</strong> {description}</p>
@@ -47,20 +64,17 @@ export default function FeaturedProject({ content }, index) {
 					<div className={css.stackContainer}>
 						<Badges list={stack} block="stack" fullContainer={false} color={false} />
 					</div>
-					<m.div variants={''} className={css.viewProject}>
-						<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
-					</m.div>
 				</div>
 			</div>
 
 			<div className={css.imageContainer}>
 				<span className={`${css.imageAnimationContainer}`}>
-					{ images.map( ({key, url, hover, h, w }, index) => {
+					{ images.map( ({key, url: imgUrl, hover, h, w }, index) => {
 						hover = ( hover === 'left' ) ? hoverLeft : hoverRight
 						return (
 							<m.div key={`${index}-${key}`} variants={item}>
 								<m.div variants={hover}>
-									<Image src={url} alt="x" height={h} width={w} />
+									<Image src={imgUrl} alt={project} height={h} width={w} />
 								</m.div>
 							</m.div>
 						)}

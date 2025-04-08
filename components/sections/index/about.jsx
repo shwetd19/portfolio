@@ -25,25 +25,25 @@ import about from '../../../styles/sections/index/about.module.scss';
  */
 export default function About() {
 	return (
-		<Section classProp={about.section}>	
+		<Section classProp={about.section} id="about">	
 			<Container spacing={['verticalXXXLrg']}>
 				<SectionTitle
 					title="About Me"
 					preTitle="Synopsis"
-					subTitle="With a diverse skill set that includes UX design, UI design, full stack development, operational architecture, systems design, photography, and branding, I am a well-rounded digital professional."
+					subTitle="I'm a developer passionate about building AI agents that automate workflows and bring intelligent voice interactions to life. With a strong foundation in full stack development and a deep interest in emerging tech, I specialize in creating smart, scalable systems that make work feel effortless."
 				/>
 				<section className={about.content}>
 					<div className={about.image}>
-						<img src="/img/family-photo.jpg" alt="Nelson family photo"/>
-						{/* <Image src="/img/family-photo.jpg" width={600} height={800}/> */}
+						<img src="/img/my-new-profile.jpeg" alt="Dhake family photo"/>
+						{/* <Image src="/img/my-new-profile.jpeg" width={600} height={800}/> */}
 					</div>
 					<div className={about.copy} >
 						<CopyBlock 
-							title="Softskills that pay the bills"
+							title="Soft skills that scale with code"
 							containerClass={about.container}
 							iconClass={about.icon}
 							icon={[ 'fat', 'ear-listen' ]}
-							copy="In addition to my design and technical expertise—I also have strong leadership, time management, and multitasking skills—honed through my experience as a business owner / managing partner, husband, and father of two. Outside of work, I enjoy staying active through sports such as hockey and snowboarding. I am confident in my ability to bring passion and value to any project."
+							copy="I build AI agents that automate workflows and voice agents that enable natural interactions. Alongside my technical skills, I bring leadership, time management, and a strong ownership mindset—shaped through real-world product building and collaboration. I'm driven by curiosity, passionate about open-source, and focused on delivering impact through thoughtful, scalable systems."
 						/>
 						<BadgesBlock 
 							title="Reasearch and planning" 
@@ -52,7 +52,7 @@ export default function About() {
 							fullContainer="fullContainer"
 							block="methods" 
 							icon="fingerprint"
-							copy="One of my favorite aspects of creating is planning the architecture of a project. From Design Systems to Brand Strategy—I enjoy working with the many touch points of user experience."
+							copy="I love designing smart systems—from automating workflows with AI agents to building voice assistants. Planning how each piece fits together is where I thrive, blending logic and creativity to shape seamless user experiences."
 							//invertedColor="invertedColor"
 							headerIcon={`${about.icon}`}
 						/>
@@ -64,10 +64,10 @@ export default function About() {
 }
 
 const methods 	= [
-	{ key: 'planet-moon', 		name: 'User Research', 		type: 'fad' },
-	{ key: 'qrcode', 			name: 'Digital Strategy', 	type: 'fad' },
-	{ key: 'window', 			name: 'Design Systems', 	type: 'fad' },
-	{ key: 'cubes', 			name: 'Product Strategy', 	type: 'far' },
-	{ key: 'layer-plus', 		name: 'Brand Strategy', 	type: 'fad' },
-	{ key: 'solar-system', 		name: 'Operations', 		type: 'fad' },
+	{ key: 'planet-moon', 		name: 'Workflow Automation', 		type: 'fad' },
+	{ key: 'qrcode', 			name: 'Conversational AI', 	type: 'fad' },
+	{ key: 'window', 			name: 'Scalable System Design', 	type: 'fad' },
+	{ key: 'cubes', 			name: 'API Development', 	type: 'far' },
+	{ key: 'layer-plus', 		name: 'Open Source', 	type: 'fad' },
+	{ key: 'solar-system', 		name: 'Developer Experience (DX)', 		type: 'fad' },
 ]

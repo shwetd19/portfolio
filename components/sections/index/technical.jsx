@@ -25,25 +25,25 @@ import about from '../../../styles/sections/index/about.module.scss'
  */
 export default function Technical() {
 	return (
-		<Section classProp={`${about.section} borderBottom`}>	
-			<Container spacing={['verticalXXXLrg']}>
+		<Section classProp={`${about.section} borderBottom`} id="technical">	
+			<Container spacing={['verticalLrg']}>
 				<SectionTitle
 					title="Technical"
 					preTitle="Hardskills"
-					subTitle="As a creative technologist, I craft intuitive digital experiences using a diverse set of tools and languages."
+					subTitle="As a developer passionate about intelligent systems, I build AI agents that automate workflows and power natural voice interactions. Blending creativity with technical depth, I turn complex processes into seamless, human-centric experiences using tools across the AI and web development stack."
 				/>
 				<section className={`${about.content} ${about.container}`}>
 					<div className={about.copy}>
 						<CopyBlock 
-							title="Polymath foundations"
+							title="AI-Powered Craftsmanship"
 							icon={[ 'fat', 'chart-network' ]}
-							copy="With a strong foundation in both design and development, I bring a unique perspective to every project and am constantly learning and evolving to stay up-to-date with the latest industry trends."
+							copy="I build AI agents and voice-driven systems that automate complex workflows. With a focus on real-time communication and LLM integration, I turn repetitive tasks into intelligent, scalable, and adaptive solutions."
 							iconClass={about.icon}
 							containerClass={about.container}
 						/>
 						<BadgesBlock 
-							title="Software I love to work with" 
-							copy="With over 20 years of experience creating digital assets, I have a deep and intuitive understanding of how the interfaces of the best software products in the world are designed. This is just some of the software I have used over that time."
+							title="What I Build" 
+							copy="I create voice agents and workflow automation tools that act, learn, and improve over time. From backend logic to conversational UX, I bring together AI and engineering for seamless human-machine collaboration."
 							list={software}
 							block="software" 
 							fullContainer="fullContainer"
@@ -53,7 +53,7 @@ export default function Technical() {
 						/>
 						<BadgesBlock 
 							title="Technologies I love to build with" 
-							copy="I deeply enjoy solving problems through code. From the front end all the way to the back end and the APIs in-between. No project is too challenging for me."
+							copy="I work with technologies like LiveKit, LangChain, TypeScript, and Node.js. These tools power the intelligent systems I build—real-time, resilient, and designed to solve problems with precision and clarity."
 							list={tech} 
 							block="tech"
 							fullContainer="fullContainer" 
@@ -84,20 +84,18 @@ const software = [
 	{ key: 'premierepro',	name: 'Premiere Pro', 		type: 'devicon' },
 ]
 
-const tech	= [
-	{ key: 'javascript', 	name: 'JavaScript', 		type: 'devicon' },
-	{ key: 'nodejs', 		name: 'NodeJS', 			type: 'devicon' },
-	{ key: 'react', 		name: 'React', 				type: 'devicon' },
-	{ key: 'nextjs', 		name: 'NextJS', 			type: 'devicon' },
-	{ key: 'jquery', 		name: 'jQuery', 			type: 'devicon' },
-	{ key: 'php', 			name: 'PHP', 				type: 'devicon' },
-	{ key: 'wordpress', 	name: 'WordPress', 			type: 'devicon' },
-	{ key: 'woocommerce', 	name: 'WooCommerce', 		type: 'devicon' },
-	{ key: "google",		name: "GA4/GTM", 			type: "devicon" },
-	{ key: 'html5', 		name: 'HTML5', 				type: 'devicon' },
-	{ key: 'css3', 			name: 'CSS3', 				type: 'devicon' },
-	{ key: 'sass', 			name: 'SASS', 				type: 'devicon' },
-	{ key: 'git', 			name: 'Git', 				type: 'devicon' },
-	{ key: 'mysql', 		name: 'MySQL', 				type: 'devicon' },
-	{ key: 'mongodb', 		name: 'MongoDB', 			type: 'devicon' },
+const tech = [
+	{ key: 'typescript', name: 'Typescript', type: 'devicon' },
+	{ key: 'nodejs', name: 'NodeJS', type: 'devicon' },
+	{ key: 'nextjs', name: 'NextJs', type: 'devicon' },
+	{ key: 'livekit', name: 'LiveKit', type: 'devicon' },
+	{ key: 'python', name: 'Python', type: 'devicon' },
+	{ key: 'googlecloud', name: 'GCP', type: 'devicon' },
+	{ key: 'restapi', name: 'RestAPI', type: 'devicon' },
+	{ key: 'javascript', name: 'Javascript', type: 'devicon' },
+	{ key: 'etsy', name: 'Etsy API', type: 'devicon' },
+	{ key: 'docker', name: 'Docker', type: 'devicon' },
+	{ key: 'git', name: 'Git', type: 'devicon' },
+	{ key: 'mongodb', name: 'MongoDB', type: 'devicon' },
+	{ key: 'postgresql', name: 'PostgreSQL', type: 'devicon' }
 ]
