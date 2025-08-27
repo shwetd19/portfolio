@@ -45,6 +45,15 @@ export default function Footer() {
 						</li>
 					</ul>
 				</section>
+				<section className={css.support}>
+					<a href={settings.support.buymeacoffee} rel="noreferrer" target="_blank">
+						<h5>{settings.support.message}</h5>
+						<div className={css.coffeeButton}>
+							<Icon icon={[ 'fas', 'coffee' ]} />
+							<span>Buy Me a Coffee</span>
+						</div>
+					</a>
+				</section>
 				<section className={css.github}>
 					<a href={settings.portfolio.repo_html} rel="noreferrer" target="_blank">
 						<h5>{settings.portfolio.forkthis}</h5>
